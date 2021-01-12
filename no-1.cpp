@@ -58,19 +58,23 @@ int main(){
     int m,n;
     printf("masukkan banyak data linked list pertama: ");
     scanf("%d",&m);
+    int arr[m];
     for(int i=0,idx=1;i<m;i++){
         int a;
         printf("masukkan no ke %d: ",idx);
         scanf("%d",&a);
+        arr[i]=a;
         pushTail1(a);
         idx++;
     }
     printf("masukkan banyak data linked list kedua: ");
     scanf("%d",&n);
+    int arr1[n];
     for(int i=0,idx=1;i<n;i++){
         int a;
         printf("masukkan no ke %d: ",idx);
         scanf("%d",&a);
+        arr1[i]=a;
         pushTail2(a);
         idx++;
     }
@@ -79,7 +83,14 @@ int main(){
     int a=temp1->no;
     int b=temp2->no;
     if(a<b){
-        pushTailAll();
+        for(int i=0;i<n;i++){
+            pushTail1(arr1[i]);
+        }
+    }
+    else{
+         for(int i=0;i<m;i++){
+            pushTail2(arr[i]);
+        }
     }
     printAll();
     return 0;
