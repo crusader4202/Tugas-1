@@ -106,6 +106,7 @@ int main(){
     pushTail1(2);
 	data *temp=head;
 	while(temp){
+		int c=temp->no;
 		popSearch(c);
 		temp=temp->next;
 	}
