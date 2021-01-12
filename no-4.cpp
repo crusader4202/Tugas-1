@@ -72,7 +72,6 @@ void popTail(){
 }
 
 void popSearch(int no){
-	for(int i=0;i<3;i++){
 	if(!head)popHead();
 	else if(head->no == no)popHead();
 	else if(tail->no == no)popTail();
@@ -88,7 +87,6 @@ void popSearch(int no){
 			}
 			target = target->next;
 		}
-	}
 	}
 }
 
@@ -108,7 +106,7 @@ int main(){
     pushTail1(2);
 	data *temp=head;
 	while(temp){
-		popSearch(temp->no);
+		popSearch(c);
 		temp=temp->next;
 	}
 	printAll();
